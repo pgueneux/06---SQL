@@ -18,7 +18,27 @@ require('./templates/header.html')
     ?>
 </header>
 
-<main>
+<main class="container-fluid">
+<div class="row">
+<div class="col-3">
+<?php
+require('./templates/nav.html')
+?>
+</div>
+<div class="col-9">
+<?php
+if(isset($_GET['read'])){
+    echo 'le read ici';
+}
+elseif(isset($_GET['create'])){
+    echo 'le create ici';
+}
+// else{
+//     echo 'rien à afficher';
+// }
+?>
+</div>
+</div>
 </main>
 
 <footer>
