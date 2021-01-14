@@ -28,14 +28,14 @@ require('./templates/nav.html')
 <div class="col-9">
 <?php
 if(isset($_GET['read'])){
-    echo 'le read ici';
+    require_once('./includes/read.inc.php');
 }
 elseif(isset($_GET['create'])){
-    echo 'le create ici';
+    require_once('./includes/create.inc.php');
 }
-// else{
-//     echo 'rien à afficher';
-// }
+else{
+    echo '<h2 class="p-5">Bienvenue !</h2>';
+}
 ?>
 </div>
 </div>
